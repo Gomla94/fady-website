@@ -1,0 +1,1394 @@
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400&family=Montserrat:wght@100;300&family=Nunito+Sans:wght@200;300;400&family=Poppins:wght@400;500&family=Roboto:wght@100;300;400;500&display=swap");
+
+/* font-family: 'Dosis', sans-serif;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+p {
+  /* margin: unset; */
+}
+
+.swiper {
+  width: 100%;
+  height: 100vh;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  background-color: yellow;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-next-wrapper {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  right: 10px;
+  left: auto;
+  background-color: none;
+  transition: all 0.3s ease-in;
+}
+
+.swiper-prev-wrapper {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  left: 10px;
+  right: auto;
+  background-color: none;
+  transition: all 0.3s ease-in;
+}
+
+.swiper-next-wrapper .swiper-button-next {
+  right: 15px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  opacity: 0 !important;
+  color: white !important;
+  transition: all 0.3s ease-in;
+}
+
+.swiper:hover > .swiper-next-wrapper .swiper-button-next {
+  opacity: 1 !important;
+}
+
+.swiper:hover > .swiper-next-wrapper {
+  opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.swiper:hover > .swiper-prev-wrapper {
+  opacity: 1 !important;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.swiper:hover > .swiper-prev-wrapper .swiper-button-prev {
+  opacity: 1 !important;
+}
+
+.top-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 35%;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+.top-header-date-day {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.top-header-date-day p {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Dosis", sans-serif;
+  transition: all 0.4s;
+  animation: topToBottom 0.5s ease-in 1s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes topToBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+
+  80% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.bottom-header .main-titles .image-wrapper {
+  width: 100px;
+  margin: auto;
+}
+
+.bottom-header .main-titles .image-wrapper img {
+  width: 100px;
+  object-fit: contain;
+}
+
+.main-titles {
+  /* position: absolute; */
+  opacity: 1;
+  width: auto;
+  margin: 0 auto;
+  height: auto;
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  animation: topToBottom 0.8s ease-in 0.3s;
+  animation-fill-mode: backwards;
+}
+
+.main-title {
+  font-family: "Dosis", sans-serif;
+  /* font-size: 2rem; */
+  display: inline;
+  color: white;
+}
+
+.sub-title {
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+  display: inline;
+  color: white;
+}
+
+.bottom-header {
+  width: 100%;
+  background-color: red;
+  height: 70px;
+  /* position: absolute; */
+  /* top: 34%; */
+  z-index: 2;
+  display: flex;
+}
+
+.links-wrapper {
+  width: 90%;
+  height: 100%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 1rem;
+}
+
+.link-item-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+  font-family: "Dosis", sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.third-header {
+  height: auto;
+  width: 100%;
+  background-color: rgb(176, 7, 7);
+  position: absolute;
+  top: 39%;
+  z-index: 2;
+  display: none;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  /* border-bottom: 0.3px solid rgb(210, 210, 210); */
+}
+
+.third-header-link {
+  text-align: center;
+  color: white;
+  font-family: "Dosis", sans-serif;
+  font-weight: 800;
+  border-bottom: 0.3px solid rgb(210, 210, 210);
+  padding: 1rem;
+}
+
+.third-header-link:nth-last-child(-n + 2) {
+  border-bottom: unset;
+}
+
+.third-header .third-header-link:nth-of-type(odd) {
+  border-right: 0.3px solid rgb(210, 210, 210);
+}
+
+.main-body-wrapper {
+  width: 100%;
+  height: auto;
+  /* background-color: red; */
+  margin-bottom: 1rem;
+}
+
+.primary-titles {
+  font-family: "Dosis", sans-serif;
+  text-align: center;
+  width: 100%;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.primary-text {
+  margin: 0 0 1.5rem auto;
+  font-size: 2rem;
+  border-bottom: 1px solid #888;
+}
+
+.secondary-text {
+  font-size: 1.2rem;
+  width: 70%;
+  margin: auto;
+}
+
+.boxes-wrapper {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.box {
+  /* min-height: 300px; */
+  font-family: "Dosis", sans-serif;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 5px 5px 25px 2px rgba(0, 0, 0, 0.1) !important;
+}
+
+.box-image-wrapper {
+  width: 100%;
+  height: 150px;
+}
+
+.box-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.box-title {
+  font-size: 1.3rem;
+  position: relative;
+}
+
+.box-title::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  border-bottom: 1px solid #999;
+  position: absolute;
+  bottom: -12px;
+  margin: auto;
+  left: 0;
+  margin-top: 50px;
+}
+
+.box-title::before {
+  content: "";
+  width: 30px;
+  height: 5px;
+  background-color: red;
+  position: absolute;
+  left: 45%;
+  bottom: -14px;
+  z-index: 1;
+}
+
+.box-description {
+  width: 90%;
+  margin: auto;
+  margin-bottom: 1rem;
+}
+
+.box a {
+  text-decoration: none;
+  font-weight: 800;
+  color: red;
+  font-size: 1.2rem;
+}
+
+/* .main-body {
+  max-width: 1100px;
+  margin: auto;
+  background-color: red;
+  height: 100%;
+} */
+
+.main-footer {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: auto;
+  padding-top: 50px;
+  border-bottom: 1px solid #999;
+}
+
+.upper-footer-content-wrapper,
+.middle-footer-content-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1.5rem;
+}
+
+.upper-footer-content-wrapper {
+  margin-bottom: 50px;
+}
+
+.upper-footer .upper-footer-section-wrapper,
+.middle-footer-section-wrapper {
+  height: 200px;
+}
+
+.upper-footer-section-wrapper .main-title,
+.middle-footer-section-wrapper .main-title {
+  font-size: 1.4rem;
+  font-family: "Dosis", sans-serif;
+  border-bottom: 1px solid #999;
+  color: black;
+  display: block;
+  margin: 5px 0px 5px 0px;
+  position: relative;
+}
+
+.upper-footer-section-wrapper .main-title::after,
+.middle-footer-section-wrapper .main-title::after {
+  content: "";
+  width: 40px;
+  height: 5px;
+  background-color: red;
+  position: absolute;
+  left: 0;
+  top: 27px;
+}
+
+.upper-footer-main-section,
+.middle-footer-main-section {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Dosis", sans-serif;
+  margin-bottom: 40px;
+}
+
+.middle-footer-main-section:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-tags-wrapper {
+  padding: 0px 0px 0px 10px;
+}
+
+.title-tags-wrapper p {
+  margin: unset;
+  font-size: 1rem;
+  font-weight: bolder;
+  margin-bottom: 10px;
+}
+
+.title-tags-wrapper a {
+  text-decoration: none;
+  color: red;
+  margin-right: 5px;
+}
+
+.upper-footer-main-section .date-box {
+  height: 80px;
+  width: 80px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5rem;
+}
+
+.middle-footer-main-section .about-our-academy-title {
+  margin: unset;
+}
+
+.middle-footer-content-wrapper .middle-footer-section-wrapper:nth-child(3) p {
+  margin: unset;
+  font-weight: 600;
+}
+
+.date-day {
+  color: #888;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+.date-month {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.socials-wrapper {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.socials-wrapper a {
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.socials-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.secondary-footer {
+  background-color: rgba(0, 0, 0, 0.1);
+  height: auto;
+}
+
+.secondary-footer .secondary-footer-title {
+  font-size: 1rem;
+  color: black;
+  text-align: center;
+  margin: unset;
+  font-family: "Dosis", sans-serif;
+}
+
+.secondary-footer-title a {
+  font-weight: 600;
+}
+
+.fa-heart {
+  color: red;
+}
+
+/* services page starts here */
+
+.main-header-image-wrapper {
+  height: 100%;
+}
+
+.main-header-image-wrapper img {
+  width: 100%;
+  height: 100%;
+}
+
+.sub-top-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  min-height: 300px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.breadcrumbs-wrapper {
+  position: absolute;
+  top: 42%;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  min-height: 75px;
+  /* background-color: #888; */
+  color: white;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+}
+
+.breadcrumbs-wrapper .breadcrumbs-container {
+  padding-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.breadcrumbs-wrapper h2 {
+  margin: unset;
+}
+
+.services-wrapper {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1.5rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.services-wrapper .box {
+  max-width: 400px;
+  min-height: 350px;
+  max-height: 350px;
+  overflow-y: hidden;
+  margin: auto;
+}
+
+.services-wrapper .box .box-description {
+  min-height: 70px;
+  max-height: 70px;
+  overflow-y: hidden;
+}
+
+/* services page ends here */
+
+/* about us page starts here */
+
+.aboutus-main-image-wrapper {
+  /* height: 500px; */
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.aboutus-main-image-wrapper img {
+  width: 70%;
+  border-radius: 10px;
+  object-fit: contain;
+}
+
+.aboutus-main-title-wrapper .aboutus-main-title {
+  text-align: center;
+  color: black;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+}
+
+.about-us-text-wrapper p {
+  text-align: center;
+  color: black;
+  font-family: "Dosis", sans-serif;
+  font-size: 1.5rem;
+  padding: 2rem;
+}
+
+/* about us page ends here */
+
+/* videos page starts here */
+
+.videos-wrapper {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 1rem;
+  margin: 5rem 0px;
+}
+
+.videos-wrapper .box {
+  max-width: 400px;
+  min-height: 350px;
+  max-height: 350px;
+  overflow-y: hidden;
+  margin: auto;
+  /* background-color: green; */
+  border-radius: 5px;
+  box-shadow: 5px 5px 15px 2px rgba(0, 0, 0, 0.4);
+}
+
+.videos-wrapper .box .box-description {
+  min-height: 70px;
+  max-height: 70px;
+  overflow-y: hidden;
+}
+
+.videos-wrapper .box .box-title::before,
+.videos-wrapper .box .box-title::after {
+  display: none;
+}
+
+.videos-wrapper .box .box-image-wrapper {
+  height: 240px;
+}
+
+.videos-wrapper img {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border-radius: 0;
+}
+
+/* videos page ends here */
+
+/* contact page starts here */
+
+.contact-form-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-form-container div {
+  flex: 1;
+}
+
+.contactus-form div {
+  margin: 1rem 0;
+}
+
+.addressinfo-wrapper span {
+  color: #777;
+  font-size: 1.2rem;
+  font-family: "Dosis", sans-serif;
+}
+
+.addressinfo-wrapper p {
+  color: #000;
+  font-size: 1.2rem;
+  font-family: "Dosis", sans-serif;
+}
+
+/* contact page ends here */
+
+/* product page starts here */
+
+.product-details-wrapper {
+  display: flex;
+  font-family: "Dosis", sans-serif;
+}
+
+.product-details-wrapper div {
+  flex: 1;
+}
+
+.product-image-wrapper {
+  background-color: yellow;
+  height: 500px;
+}
+
+.product-image-wrapper img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.product-info-wrapper {
+  /* background-color: blue; */
+  height: 500px;
+  padding: 1rem;
+}
+
+.product-info-wrapper a {
+  color: rgb(0, 132, 255);
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.product-info-wrapper .product-details-name {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.product-info-wrapper .product-details-desc {
+  color: #888;
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
+.product-info-wrapper button {
+  height: 40px;
+  width: 100px;
+  display: block;
+  padding: 5px;
+  border: none;
+  color: #fff;
+  background-color: rgb(0, 172, 0, 0.7);
+  border-radius: 5px;
+  margin: 2rem 0;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+
+.product-info-wrapper button:hover {
+  transform: translatey(5px);
+  box-shadow: 2px 2px 10px 2px rgba(0, 0, 0, 0.4);
+  background-color: rgb(0, 172, 0);
+}
+
+/* product page ends here */
+
+/* courses page starts here */
+.courses-main-header {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 85vh;
+  background-image: url("../images/slider1.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.courses-main-header .main-header-text-wrapper {
+  position: absolute;
+  left: 5%;
+  top: 35%;
+}
+
+.courses-main-header p {
+  margin: unset;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: "Dosis", sans-serif;
+  text-transform: uppercase;
+}
+
+.courses-main-header p:nth-child(2) {
+  width: 80%;
+}
+
+.courses-main-header p:first-child {
+  margin: 2rem 0;
+}
+
+.courses-secondary-header {
+  background-color: red;
+  height: 85px;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.courses-secondary-header p {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Dosis", sans-serif;
+  text-transform: uppercase;
+  /* margin: unset; */
+}
+
+.courses-secondary-header p,
+.courses-third-header p {
+  margin: unset;
+}
+
+.courses-third-header {
+  background-color: black;
+  color: white;
+  height: auto;
+  width: 100%;
+  text-align: center;
+  /* padding: 1.3rem; */
+  font-family: "Dosis", sans-serif;
+  text-transform: uppercase;
+}
+
+.courses-third-header p {
+  width: 70%;
+  margin: auto;
+  padding: 1.5rem;
+  line-height: 2rem;
+}
+
+.courses-main-title {
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  text-transform: uppercase;
+}
+
+.courses-secondary-title {
+  text-align: center;
+  font-family: "Dosis", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.courses-wrapper {
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 2fr);
+  /* grid-template-rows: repeat(2, 1fr); */
+  grid-gap: 0.5rem;
+}
+
+.courses-wrapper .course-box {
+  padding: 1.5rem;
+  font-family: "Dosis", sans-serif;
+  border: 1px solid #888;
+  border-radius: 5px;
+}
+
+.course-box .main-title {
+  color: black;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.course-box .description {
+  color: red;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.course-box .course-duration {
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.course-box .course-duration > i {
+  margin-right: 5px;
+}
+
+.course-box a {
+  background-color: red;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+  display: inline-block;
+  transition: ease-in-out 0.3s;
+}
+
+.course-box a:hover {
+  transform: translateY(5px);
+  box-shadow: 2px 2px 15px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* courses page ends here */
+
+/* course detils page starts here */
+
+.course-details-main-header {
+  height: 50vh;
+  position: relative;
+  font-family: "Dosis", sans-serif;
+  color: white;
+  display: flex;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.course-details-main-header img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.course-details-main-header .main-header-text-wrapper {
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  align-items: center;
+}
+
+.course-details-main-header .main-header-text-wrapper .course-tag {
+  background-color: rgb(255, 174, 0);
+  padding: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.course-details-main-header
+  .main-header-text-wrapper
+  .main-header-secondary-title {
+  background-color: rgb(190, 148, 56);
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+.course-details-wrapper,
+.course-includes-wrapper {
+  border: 1px solid rgb(218, 215, 215);
+  border-radius: 5px;
+  padding: 1rem;
+  font-family: "Dosis", sans-serif;
+  transition: ease-out 0.2s;
+  animation: courseDetails ease-in 0.9s 0.1s;
+  animation-fill-mode: backwards;
+  margin: 10px;
+}
+
+.course-includes-wrapper {
+  animation: courseDetails ease-in 0.9s 0.5s;
+  animation-fill-mode: backwards;
+}
+
+@keyframes courseDetails {
+  0% {
+    opacity: 0;
+    transform: translatex(-300px);
+  }
+
+  80% {
+    transform: translatex(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translatex(0);
+  }
+}
+
+.course-details-wrapper:hover,
+.course-includes-wrapper:hover {
+  box-shadow: 5px 0 10px 2px rgba(0, 0, 0, 0.2);
+}
+
+.course-details-wrapper > p:nth-of-type(1) {
+  color: #888;
+}
+
+.course-details-wrapper .course-details-expect,
+.course-includes-wrapper .course-includes-title {
+  color: red;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.course-details-wrapper .course-details-secondary-text {
+  color: #999;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.course-details-wrapper .course-focus-areas > p > i,
+.course-includes-wrapper .course-focus-areas > p > i {
+  font-weight: 800;
+  margin-right: 10px;
+}
+
+/* course details page ends here */
+
+/* course videos page starts here */
+
+.main-course {
+  height: 70vh;
+  /* background-color: yellow; */
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 2rem;
+}
+
+.main-course .main-course-wrapper {
+  height: 100%;
+  /* background-color: blue; */
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
+}
+
+.main-video {
+  /* background-color: yellow; */
+  height: 100%;
+  width: 70%;
+  left: 0;
+  /* display: block; */
+  position: absolute;
+}
+
+.main-video .main-video-header {
+  height: 50px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.main-video .main-video-header p {
+  font-size: 1.5rem;
+  padding: 0 1rem;
+  font-family: "Dosis", sans-serif;
+  text-transform: capitalize;
+}
+
+.mainvideo-wrapper {
+  /* background-color: firebrick; */
+  height: 94%;
+}
+
+.mainvideo-wrapper > video {
+  max-height: 100%;
+  width: 100%;
+}
+
+.othervideos-wrapper {
+  display: block;
+  /* background-color: green; */
+  height: 100%;
+  width: 30%;
+  right: 0;
+  position: absolute;
+  overflow-y: scroll;
+  border-left: 1px solid rgb(227, 227, 227);
+  padding: 1rem 0.5rem;
+}
+
+.othervideos-wrapper .anothervideo-wrapper {
+  width: 100%;
+  height: 100px;
+  max-height: 200px;
+  /* background-color: palegoldenrod; */
+  display: flex;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  /* border-radius: 5px; */
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  transition: ease-out 0.2s;
+}
+
+.othervideos-wrapper .anothervideo-wrapper:hover {
+  box-shadow: 12px 3px 8px 8px rgba(0, 0, 0, 0.3);
+}
+
+.anothervideo-image-wrapper {
+  width: 50%;
+  overflow: hidden;
+}
+
+.anothervideo-wrapper img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transition: ease-out 0.3s;
+}
+
+.othervideos-wrapper .anothervideo-wrapper:hover img {
+  transform: scale(1.1);
+}
+
+.anothervideo-details-wrapper {
+  width: 50%;
+  padding: 0 0.5rem;
+  font-family: "Dosis", sans-serif;
+}
+
+.anothervideo-title {
+  margin-bottom: 2px;
+}
+
+.anothervideo-duration {
+  text-transform: capitalize;
+}
+
+/* course videos page ends here */
+
+.hamburger {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin: auto;
+  display: none;
+}
+
+.hamburger .line {
+  display: block;
+  width: 40px;
+  height: 3px;
+  background-color: white;
+  margin-block: 10px;
+  border-radius: 4px;
+  transition: transform 0.3s, opacity 0.2s;
+}
+
+.bottom-header.active + div {
+  display: grid;
+}
+
+.bottom-header.active .line:nth-child(1) {
+  transform: translateY(13px) rotate(45deg);
+}
+
+.bottom-header.active .line:nth-child(2) {
+  opacity: 0;
+}
+
+.bottom-header.active .line:nth-child(3) {
+  transform: translateY(-13px) rotate(-45deg);
+}
+
+.sub-top-header .image-wrapper {
+  width: 100px;
+  margin: auto;
+}
+
+.sub-top-header img {
+  width: 100px;
+  object-fit: contain;
+}
+
+@media screen and (min-width: 1920px) {
+  .breadcrumbs-wrapper {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    min-height: 75px;
+    /* background-color: #888; */
+    color: white;
+    font-family: "Dosis", sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .main-header {
+    min-height: 300px;
+  }
+
+  .sub-top-header {
+    min-height: 300px;
+  }
+
+  .bottom-header {
+    top: 300px;
+  }
+
+  .courses-main-header {
+    height: 89vh;
+  }
+
+  .anothervideo-image-wrapper {
+    width: 30%;
+    overflow: hidden;
+  }
+
+  .anothervideo-details-wrapper {
+    width: 70%;
+    padding: 0.5rem;
+    font-family: "Dosis", sans-serif;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .othervideos-wrapper .anothervideo-wrapper {
+    /* min-height: 120px; */
+  }
+
+  .anothervideo-image-wrapper {
+    width: 40%;
+  }
+
+  .anothervideo-details-wrapper {
+    width: 60%;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .courses-wrapper {
+    grid-template-columns: repeat(2, 2fr);
+  }
+
+  .main-course {
+    height: 100%;
+    flex-direction: column;
+  }
+
+  .main-course .main-video {
+    position: unset;
+    width: 100%;
+  }
+
+  .main-course .othervideos-wrapper {
+    position: unset;
+    width: 100%;
+    height: 500px;
+  }
+
+  .main-course .anothervideo-image-wrapper {
+    width: 20%;
+  }
+
+  .main-course .anothervideo-details-wrapper {
+    width: unset;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .boxes-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .upper-footer-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1.5rem;
+  }
+
+  .middle-footer-content-wrapper {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1.5rem;
+  }
+
+  .middle-footer-section-wrapper {
+    height: auto;
+  }
+
+  .upper-footer .upper-footer-section-wrapper {
+    height: auto;
+  }
+
+  .videos-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .videos-wrapper .box-image-wrapper {
+    width: 100%;
+  }
+
+  .contact-form-container {
+    flex-direction: column;
+  }
+
+  .courses-wrapper {
+    grid-template-columns: repeat(2, 2fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .sub-top-header {
+    min-height: 440px;
+  }
+
+  .primary-text {
+    width: 90%;
+    margin: auto;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .links-wrapper {
+    display: none;
+  }
+
+  .breadcrumbs-wrapper {
+    position: absolute;
+    top: 27%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    min-height: 75px;
+    /* background-color: #888; */
+    color: white;
+    font-family: "Dosis", sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .boxes-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+    height: auto !important;
+  }
+
+  .services-wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .box-image-wrapper {
+    width: 80%;
+    height: 200px;
+    margin: auto;
+  }
+
+  .box {
+    height: 450px;
+  }
+
+  .about-us-text-wrapper p {
+    font-size: 1rem;
+  }
+
+  .courses-third-header {
+    height: auto;
+  }
+
+  .courses-secondary-header {
+    padding: 1.5rem;
+  }
+
+  .courses-secondary-header p {
+    font-size: 1.5rem;
+  }
+
+  .courses-wrapper {
+    grid-template-columns: repeat(1, 2fr);
+  }
+
+  .course-details-main-header .main-header-text-wrapper {
+    top: 10%;
+    left: 5%;
+  }
+
+  .course-details-main-header .main-header-text-wrapper {
+    width: 90%;
+  }
+
+  .main-course .anothervideo-image-wrapper {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  /* for tablets */
+
+  .bottom-header {
+    top: 300px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  /* for large laptops */
+  .top-header {
+    /* height: 300px; */
+  }
+
+  .bottom-header {
+    top: 300px;
+  }
+}
